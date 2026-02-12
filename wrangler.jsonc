@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "noaa-solarwind-poller",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-11-01",
+
+  "triggers": { "crons": ["*/5 * * * *"] },
+
+  "vars": {
+    "NOAA_KP_URL": "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json",
+    "NOAA_WIND_URL": "https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json",
+    "NOAA_MAG_URL": "https://services.swpc.noaa.gov/json/rtsw/rtsw_mag_1m.json"
+  }
+}
